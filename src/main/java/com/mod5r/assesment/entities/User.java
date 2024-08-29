@@ -10,9 +10,7 @@ import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
-import lombok.Getter;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
@@ -31,7 +29,7 @@ public class User implements UserDetails {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @Column(name = "username")
+    @Column(name = "username",unique = true, nullable = false)
     private String userName;
 
     @Column(name = "email",unique = true , nullable = false)
@@ -54,10 +52,12 @@ public class User implements UserDetails {
         return List.of();
     }
 
+
     @Override
     public String getUsername() {
         return userName;
     }
+
 
     @Override
     public boolean isAccountNonExpired() {
