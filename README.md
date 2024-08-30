@@ -29,6 +29,10 @@ Welcome to the **User Account Management System**! This project is built using *
 
 1. **Add Account API**: Allows users to add a new account.
 2. **Delete Account API**: Allows users to delete an existing account.
+   
+### Localization Service
+
+- **Localization Service**: Retrieves localized messages based on the language provided in the request header, using a locale file.
 
 ### Logging and Monitoring
 
@@ -47,6 +51,8 @@ Welcome to the **User Account Management System**! This project is built using *
 ### Email Functionality
 
 - **Java Mail Sender**: Handles sending of verification emails.
+- ![image](https://github.com/user-attachments/assets/1098feda-bca7-4337-932f-c5e8d6345580)
+
 
 ### Security
 
@@ -89,6 +95,8 @@ Welcome to the **User Account Management System**! This project is built using *
 
 6. **Access API Documentation**:
    - Swagger UI is available at [http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html).
+   - ![image](https://github.com/user-attachments/assets/107f241c-a8ce-47fa-b98a-c37776f1243a)
+
 
 ## 🧪 Testing
 
