@@ -10,9 +10,9 @@ import com.mod5r.assesment.services.AuthenticationService;
 import com.mod5r.assesment.services.EmailService;
 import com.mod5r.assesment.services.LocalizationService;
 import jakarta.mail.MessagingException;
-import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.thymeleaf.TemplateEngine;
@@ -70,7 +70,7 @@ public class AuthenticationServiceImpl implements AuthenticationService {
     }
 
     @Override
-    public User authenticate(SignInDto input, String language) {
+    public User authenticate(SignInDto input, String language) throws AuthenticationException {
         User user = userRepository.findByEmail(input.getEmail())
                 .orElseThrow(() -> new BusinessException(localizationService.getMessage("user.not.found", language)));
 
