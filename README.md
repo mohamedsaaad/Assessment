@@ -97,7 +97,3 @@ Welcome to the **User Account Management System**! This project is built using *
     ```bash
     ./mvnw test
     ```
-
-## 📝 License
-
-This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
