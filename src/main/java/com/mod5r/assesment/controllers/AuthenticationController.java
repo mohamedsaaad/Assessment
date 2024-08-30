@@ -23,11 +23,7 @@ import org.apache.logging.log4j.Logger;
 
 @RestController
 @RequestMapping("/auth")
-public class AuthenticationController {
-    private static final Logger logger = LogManager.getLogger(AuthenticationController.class);
-
-    protected final static String LANGUAGE_HEADER = "Content-Language";
-    protected final static String LANGUAGE_HEADER_VALUE = "en";
+public class AuthenticationController implements BaseController{
 
     private final JwtService jwtService;
     private final AuthenticationService authenticationService;
